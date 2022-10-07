@@ -415,3 +415,167 @@ header {
   color: var(--black);
   margin: 0 1.25rem 0 0;
 }
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 1100px) {
+  .hero-section h1 {
+    font-size: 8rem;
+  }
+  .digi-fash-content {
+    width: 100%;
+  }
+  .web3-fash-content {
+    width: 100%;
+  }
+  .pioneer-df-content {
+    width: 60%;
+    left: 38%;
+  }
+  .pioneer-df-content p {
+    width: 90%;
+  }
+  .designer-sec-cont {
+    padding: 0 0 0 5rem;
+    right: 50%;
+  }
+  .designer-sec-cont p {
+    width: 100%;
+  }
+  .cura-sec-content {
+    width: 100%;
+  }
+  .metaverse-content p {
+    width: 80%;
+  }
+  .metaverse-content.nl-content p {
+    width: 70%;
+  }
+  .metaverse-content.nl-content input {
+    width: 50%;
+  }
+  .footer-content {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .hero-section h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .app h3 {
+    font-size: 6rem;
+  }
+  .app h5 {
+    font-size: 2.5rem;
+  }
+  .app h4 {
+    font-size: 3.15rem;
+  }
+  .app p {
+    font-size: 1.75rem;
+  }
+  .digi-fash-content h4 {
+    text-align: center;
+  }
+  .web3-grid {
+    grid-template-columns: 1fr;
+  }
+  .web3-grid h3 br {
+    display: none;
+  }
+  .pioneer-df-content {
+    width: 80%;
+    left: 25%;
+    padding: 0 5rem;
+  }
+  .designer-sec-cont {
+    width: 100%;
+    padding: 0 5rem;
+    right: 0;
+  }
+  .designer-sec-cont p {
+    width: 60%;
+  }
+  .pioneer-df-content p {
+    width: 90%;
+  }
+  .cura-sec-content {
+    flex-direction: column;
+  }
+  .cura-right-grid {
+    width: 100%;
+    margin: 4.5rem 0 0 0;
+  }
+  .cura-sec-content img {
+    width: 100%;
+  }
+  .metaverse-content {
+    width: 90%;
+  }
+  .metaverse-content p {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .hero-section h1 {
+    font-size: 5.5rem;
+  }
+  .box {
+    padding: 0 2rem;
+  }
+  .app h3 {
+    font-size: 4.5rem;
+  }
+  .app h5 {
+    font-size: 2rem;
+  }
+  .app h4 {
+    font-size: 2.5rem;
+  }
+  .app p {
+    font-size: 1.5rem;
+  }
+  .digi-fash-grid {
+    grid-template-columns: 1fr;
+  }
+  .web3-grid {
+    grid-gap: 4rem;
+  }
+  .pioneer-df-content {
+    width: 100%;
+    padding: 0 2rem;
+    left: 0;
+  }
+  .designer-sec-cont {
+    padding: 0 2rem;
+  }
+  .designer-sec-cont p {
+    width: 100%;
+  }
+  .metaverse-content {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .metaverse-content p {
+    width: 100%;
+  }
+  .btn-white {
+    width: 80%;
+  }
+  .metaverse-content.wwu-content button {
+    width: 80%;
+  }
+  .metaverse-content.nl-content p {
+    width: 100%;
+  }
+  .metaverse-content.nl-content input {
+    width: 100%;
+  }
+  .footer-content {
+    width: 100%;
+  }
+  .web3-fash-content h4 {
+    text-align: center;
+  }
+}
