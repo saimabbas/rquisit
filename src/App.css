@@ -19,11 +19,14 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+a {
+  text-decoration: none;
+}
 .box {
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  padding: 0 5rem;
+  padding: 0 6.5rem;
 }
 .app b {
   font-weight: 800;
@@ -34,6 +37,7 @@ body {
 .app h3 {
   font-size: 7rem;
   font-weight: 700;
+  line-height: 7rem;
 }
 .app h4 {
   font-size: 3.25rem;
@@ -71,16 +75,20 @@ header {
   left: 50%;
   transform: translate(-50%, 0);
 }
-.header-left {
+.header-icons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: max-content;
 }
-.header-left a svg {
-  font-size: 1.75rem;
+.header-icons a svg {
+  font-size: 2rem;
   color: var(--white);
   margin: 0 3.15rem 0 0;
+  transition: 0.5s;
+}
+.header-icons a svg:hover {
+  transform: translate(0, -0.5rem);
 }
 .header-center {
   display: flex;
@@ -102,18 +110,41 @@ header {
 .header-navbar a {
   font-size: 2rem;
   color: var(--white);
+  transition: 0.5s;
   text-decoration: none;
   font-weight: 500;
   margin: 0 1.5rem;
+  position: relative;
 }
-.hero-section h1 {
-  font-size: 8.5rem;
-  color: var(--white);
+.header-navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--white);
+  transition: 0.5s;
+}
+.header-navbar a:hover::after {
+  width: 100%;
+}
+.hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 400;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.hero-section h1 {
+  font-size: 8.5rem;
+  color: var(--white);
+  font-weight: 300;
 }
 .header-content {
   width: 100%;
@@ -132,8 +163,12 @@ header {
   border: 0;
   border-radius: 1000px;
   font-weight: 500;
+  transition: 0.5s;
+  text-align: center;
 }
-
+.btn-white:hover {
+  opacity: 0.75;
+}
 /* DIGITAL FASHION SECTION  */
 .digital-fash-section {
   padding: 12rem 0;
@@ -159,8 +194,9 @@ header {
 }
 .digi-fash-grid img {
   width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
+  min-height: 52.5rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
 }
 
 /* PIONEERING SECTION */
@@ -174,12 +210,24 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: left;
+  z-index: 10;
+}
+.pioneer-digifash-grd {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 .pioneer-df-content {
   position: absolute;
   bottom: 20%;
   left: 50%;
   width: 50%;
+  z-index: 30;
 }
 .pioneer-df-content h3 {
   color: var(--white);
@@ -234,7 +282,7 @@ header {
 /* DESIGNER SECTION  */
 .designer-section {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .designer-section img {
@@ -242,7 +290,8 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 20%;
+  object-position: right;
+  filter: brightness(0.75);
 }
 .designer-sec-cont {
   position: absolute;
@@ -324,14 +373,18 @@ header {
 }
 .metaverse-content p {
   color: var(--white);
-  width: 60%;
   text-align: center;
   line-height: 28px;
   margin: 4rem 0 8rem 0;
 }
 .metaverse-content button {
-  padding: 2.5rem 6rem;
-  letter-spacing: 0.5rem;
+  padding: 2rem 6rem;
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+}
+.metaverse-content a {
+  padding: 2rem 6rem;
+  letter-spacing: 0.25rem;
   font-size: 2rem;
 }
 
@@ -343,7 +396,7 @@ header {
 .metaverse-content.wwu-content h3 {
   color: #27201d;
 }
-.metaverse-content.wwu-content button {
+.metaverse-content.wwu-content a {
   color: var(--white);
   width: 50%;
   margin: 6rem auto 0 auto;
@@ -355,31 +408,43 @@ header {
 .metaverse-section.nl-section {
   background-color: #000000;
 }
-.metaverse-content.nl-content p {
-  margin: 3rem auto;
-  width: 52%;
+.nl-content {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
 }
-.metaverse-content.nl-content input {
+.nl-content p {
+  margin: 3.5rem auto;
+  width: 100%;
+}
+.input-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input-box input {
   padding: 2rem;
   color: var(--black);
   font-size: 1.9rem;
   font-weight: 400;
   border: none;
   background-color: var(--white);
-  width: 45%;
-  margin: 0 0 3rem 0;
+  width: 100%;
+  margin: 0 2.5rem 0 0;
 }
-.metaverse-content.nl-content input::placeholder {
+.input-box input::placeholder {
   color: #b0b0b0;
   font-size: 1.9rem;
   font-weight: 400;
 }
-.metaverse-content.nl-content input:focus {
+.input-box input:focus {
   outline: none;
 }
-.metaverse-content.nl-content button {
+.nl-content button {
   padding: 2rem 3.5rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
+  white-space: nowrap;
 }
 
 /* FOOTER  */
@@ -399,11 +464,26 @@ header {
   justify-content: flex-start;
   width: 100%;
 }
-.footer-grid span {
+.footer-grid > a {
   font-size: 1.9rem;
   color: #6d6866;
   font-weight: 400;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
+  text-decoration: none;
+  position: relative;
+}
+.footer-grid > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #a1a1a1;
+  transition: 0.5s;
+}
+.footer-grid a:hover::after {
+  width: 100%;
 }
 .footer-icons {
   display: flex;
@@ -411,13 +491,41 @@ header {
   align-items: center;
 }
 .footer-icons svg {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: var(--black);
-  margin: 0 1.25rem 0 0;
+  margin: 0 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.footer-icons svg:hover {
+  transform: translate(0, -0.5rem);
+}
+.hero-content .header-icons,
+.hero-content button {
+  display: none;
+}
+.nl-section {
+  width: 100%;
+  padding: 15rem 0;
+  background-color: var(--black);
+}
+.nl-content h3 {
+  color: var(--white);
+  text-align: center;
 }
 
+.nl-content p {
+  color: var(--white);
+  width: 100%;
+  margin: 3.5rem auto;
+  text-align: center;
+  line-height: 28px;
+}
 /* RESPONSIVENESS */
 @media only screen and (max-width: 1100px) {
+  .box {
+    padding: 0 2.5rem;
+  }
   .hero-section h1 {
     font-size: 8rem;
   }
@@ -447,10 +555,10 @@ header {
   .metaverse-content p {
     width: 80%;
   }
-  .metaverse-content.nl-content p {
+  .nl-content p {
     width: 70%;
   }
-  .metaverse-content.nl-content input {
+  .input-box input {
     width: 50%;
   }
   .footer-content {
@@ -458,12 +566,20 @@ header {
   }
 }
 @media only screen and (max-width: 850px) {
+  .header-left,
+  .header-right {
+    display: none;
+  }
+  .header-center {
+    width: 100%;
+  }
   .hero-section h1 {
     text-align: center;
     width: 100%;
   }
   .app h3 {
     font-size: 6rem;
+    line-height: 6rem;
   }
   .app h5 {
     font-size: 2.5rem;
@@ -515,9 +631,29 @@ header {
   .metaverse-content p {
     width: 65%;
   }
+  .header-icons {
+    margin: 3.5rem 0;
+  }
+  .hero-content .header-icons {
+    display: flex;
+  }
+  .hero-content button {
+    display: block;
+  }
 }
-
 @media only screen and (max-width: 650px) {
+  .nl-content {
+    max-width: 650px;
+  }
+  .digi-fash-grid img {
+    min-height: 40rem;
+  }
+  .input-box {
+    flex-direction: column;
+  }
+  .input-box input {
+    margin: 0 0 1.5rem 0;
+  }
   .hero-section h1 {
     font-size: 5.5rem;
   }
@@ -526,6 +662,7 @@ header {
   }
   .app h3 {
     font-size: 4.5rem;
+    line-height: 4.5rem;
   }
   .app h5 {
     font-size: 2rem;
@@ -560,16 +697,13 @@ header {
   .metaverse-content p {
     width: 100%;
   }
-  .btn-white {
+  .metaverse-content.wwu-content a {
     width: 80%;
   }
-  .metaverse-content.wwu-content button {
-    width: 80%;
-  }
-  .metaverse-content.nl-content p {
+  .nl-content p {
     width: 100%;
   }
-  .metaverse-content.nl-content input {
+  .input-box input {
     width: 100%;
   }
   .footer-content {
@@ -577,5 +711,20 @@ header {
   }
   .web3-fash-content h4 {
     text-align: center;
+  }
+  .nl-section,
+  .web3-fash-section,
+  .footer-content,
+  .curation-section {
+    padding: 7.5rem 0;
+  }
+  .metaverse-section {
+    height: 85vh;
+  }
+  .designer-section {
+    min-height: 75vh;
+  }
+  .digital-fash-section {
+    padding: 7.5rem 0;
   }
 }

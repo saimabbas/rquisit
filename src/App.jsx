@@ -4,7 +4,7 @@ import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import Logo from "./assets/img/logo.png";
 import BGC from "./assets/img/bgc-img.jpg";
-import BGC2 from "./assets/img/bgc2-img.jpg";
+import BGC2 from "./assets/img/bgc2-img.png";
 import DigiFash1 from "./assets/img/digi1.jpg";
 import DigiFash2 from "./assets/img/digi2.jpg";
 import DigiFash3 from "./assets/img/digi3.jpeg";
@@ -19,18 +19,35 @@ function App() {
     <div className="app">
       <section className="hero-section">
         <img src={BGC} alt="Hero-img" />
-        <h1>future | fashion</h1>
+        <div className="hero-content">
+          <h1>future | fashion</h1>
+          <div className="header-icons ">
+            <a target="_blank" href="#">
+              <FaFacebookF />
+            </a>{" "}
+            <a target="_blank" href="https://www.instagram.com/rquisit/?hl=en">
+              <BsInstagram />
+            </a>
+            <a target="_blank" href="https://twitter.com/rquisit">
+              <BsTwitter />
+            </a>
+          </div>
+          <button className="btn-white">CONNECT WALLET</button>
+        </div>
         <header>
           <div className="box">
             <div className="header-content">
-              <div className="header-left">
-                <a href="#">
+              <div className="header-left header-icons">
+                <a target="_blank" href="#">
                   <FaFacebookF />
                 </a>{" "}
-                <a href="#">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/rquisit/?hl=en"
+                >
                   <BsInstagram />
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://twitter.com/rquisit">
                   <BsTwitter />
                 </a>
               </div>
@@ -65,6 +82,7 @@ function App() {
         </div>
       </section>
       <section className="pioneer-digifash">
+        <div className="pioneer-digifash-grd"></div>
         <img src={BGC2} alt="" />
         <div className="box">
           <div className="pioneer-df-content">
@@ -172,7 +190,13 @@ function App() {
               off your <strong>digital fashion</strong> in the{" "}
               <strong>Metaverse!</strong>
             </p>
-            <button className="btn-white">Jump In</button>
+            <a
+              target="_blank"
+              href="https://play.decentraland.org/?position=-82%2C-35&realm=dg"
+              className="btn-white"
+            >
+              Jump In
+            </a>
           </div>
         </div>
       </section>
@@ -181,20 +205,28 @@ function App() {
         <div className="box">
           <div className="metaverse-content wwu-content">
             <h3>APPLY TO WORK WITH US</h3>
-            <button className="btn-white">Click Here</button>
+            <a
+              target={"_blank"}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdMkYl3RtKCUzOOrKo79OLNRs-iCvwwrUBII07GeRmU2Qv9OQ/viewform"
+              className="btn-white"
+            >
+              Click Here
+            </a>
           </div>
         </div>
       </section>
-      <section className="metaverse-section nl-section">
+      <section className="nl-section">
         <div className="box">
-          <div className="metaverse-content nl-content">
+          <div className="nl-content">
             <h3>Newsletter</h3>
             <p>
               Stay up to date on new releases, interviews, events, and updates
               from the community.
             </p>
-            <input type="text" placeholder="Email Address" />
-            <button className="btn-white">sign up</button>
+            <div className="input-box">
+              <input type="text" placeholder="Email Address" />
+              <button className="btn-white">Sign Up</button>
+            </div>
           </div>
         </div>
       </section>
@@ -202,21 +234,36 @@ function App() {
         <div className="box">
           <div className="footer-content">
             <div className="footer-grid">
-              <span>About</span>
-              <span>Privacy</span>
-              <span>Terms of Service</span>
-              <span>Partnership</span>
-              <span>Contact us</span>
+              <a href="#">About</a>
+              <a href="#">Privacy</a>
+              <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/terms-of-service">
+                Terms of Service
+              </a>
+              <a href="#">Partnership</a>
+              <a href="#">Contact us</a>
             </div>
             <div className="footer-grid">
-              <span>FAQ</span>
-              <span>Education</span>
-              <span>Refund Policy</span>
-              <span>Jobs</span>
+              <a href="#">FAQ</a>
+              <a href="#">Education</a>
+              <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/refund-policy">
+                Refund Policy
+              </a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMkYl3RtKCUzOOrKo79OLNRs-iCvwwrUBII07GeRmU2Qv9OQ/viewform">
+                Jobs
+              </a>
               <div className="footer-icons">
-                <FaFacebookF />
-                <BsInstagram />
-                <BsTwitter />
+                <a target="_blank" href="">
+                  <FaFacebookF />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/rquisit/?hl=en"
+                >
+                  <BsInstagram />
+                </a>
+                <a target="_blank" href="https://twitter.com/rquisit">
+                  <BsTwitter />
+                </a>
               </div>
             </div>
           </div>
