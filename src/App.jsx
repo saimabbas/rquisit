@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
@@ -13,26 +13,16 @@ import Designer from "./assets/img/designer.png";
 import CuraImg from "./assets/img/teal-img.png";
 import Metaverse from "./assets/img/metaverse.png";
 import Workwithus from "./assets/img/work.jpg";
+import { MdClose } from "react-icons/md";
 
 function App() {
+  const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   return (
     <div className="app">
       <section className="hero-section">
         <img src={BGC} alt="Hero-img" />
         <div className="hero-content">
           <h1>future | fashion</h1>
-          <div className="header-icons ">
-            <a target="_blank" href="#">
-              <FaFacebookF />
-            </a>{" "}
-            <a target="_blank" href="https://www.instagram.com/rquisit/?hl=en">
-              <BsInstagram />
-            </a>
-            <a target="_blank" href="https://twitter.com/rquisit">
-              <BsTwitter />
-            </a>
-          </div>
-          <button className="btn-white">CONNECT WALLET</button>
         </div>
         <header>
           <div className="box">
@@ -53,6 +43,15 @@ function App() {
               </div>
               <div className="header-center">
                 <img src={Logo} alt="" />
+                <div
+                  className="header-mob-icon"
+                  onClick={() => {
+                    setIsHeaderMobShowing(true);
+                  }}
+                >
+                  <div></div>
+                  <div></div>
+                </div>
                 <div className="header-navbar">
                   <a href="#">AboutUs</a>
                   <a href="#">DigitalFashion</a>
@@ -64,6 +63,44 @@ function App() {
               </div>
             </div>
           </div>
+          {isHeaderMobShowing ? (
+            <div className="header-mob">
+              <div className="box">
+                <div className="header-mob-content">
+                  <div
+                    className="header-mob-close-btn"
+                    onClick={() => {
+                      setIsHeaderMobShowing(false);
+                    }}
+                  >
+                    <MdClose />
+                  </div>
+                  <div className="header-mob-links">
+                    <a href="#">AboutUs</a>
+                    <a href="#">DigitalFashion</a>
+                    <a href="#">LearnNFTs</a>
+                  </div>
+                  <div className="header-mob-bottom">
+                    <div className="header-mob-icons">
+                      <a target="_blank" href="#">
+                        <FaFacebookF />
+                      </a>{" "}
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/rquisit/?hl=en"
+                      >
+                        <BsInstagram />
+                      </a>
+                      <a target="_blank" href="https://twitter.com/rquisit">
+                        <BsTwitter />
+                      </a>
+                    </div>
+                    <button className="btn-white">CONNECT WALLET</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : null}
         </header>
       </section>
       <section className="digital-fash-section">
@@ -269,6 +306,66 @@ function App() {
           </div>
         </div>
       </footer>
+      {/* <div id="mc_embed_signup">
+        <form
+          action="https://rquisit.us9.list-manage.com/subscribe/post?u=a0b0a4f5b94ea6d6451822e49&amp;id=bbae0adb11&amp;f_id=00b60ae1f0"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          className="validate"
+          target="_blank"
+          novalidate
+        >
+          <div id="mc_embed_signup_scroll">
+            <h2></h2>
+            <div className="indicates-required">
+              <span className="asterisk">*</span> indicates required
+            </div>
+            <div className="mc-field-group">
+              <label htmlFor="mce-EMAIL">
+                Email Address <span className="asterisk">*</span>
+              </label>
+              <input
+                type="email"
+                name="EMAIL"
+                className="required email"
+                id="mce-EMAIL"
+                required
+                value=""
+              />
+              <span id="mce-EMAIL-HELPERTEXT" className="helper_text"></span>
+            </div>
+            <div id="mce-responses" className="clear">
+              <div
+                className="response"
+                id="mce-error-response"
+                style="display:none"
+              ></div>
+              <div
+                className="response"
+                id="mce-success-response"
+                style="display:none"
+              ></div>
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input
+                type="text"
+                name="b_a0b0a4f5b94ea6d6451822e49_bbae0adb11"
+                tabIndex="-1"
+              />
+            </div>
+            <div className="clear">
+              <input
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                className="button"
+              />
+            </div>
+          </div>
+        </form>
+      </div> */}
     </div>
   );
 }
