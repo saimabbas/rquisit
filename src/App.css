@@ -729,7 +729,7 @@ header {
     display: none;
   }
   .hero-content {
-    top: 80%;
+    top: 65%;
   }
   .header-mob-icon {
     display: block;
@@ -843,5 +843,8 @@ header {
   }
   .wwu-section {
     margin: 6.5rem 0;
+  }
+  .hero-section {
+    min-height: 90vh;
   }
 }
