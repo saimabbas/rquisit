@@ -550,6 +550,7 @@ header {
   top: 0;
   z-index: 150;
   left: 0;
+  -webkit-transform: translateZ(0);
 }
 .header-mob-content {
   width: 100%;
