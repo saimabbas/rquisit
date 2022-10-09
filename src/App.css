@@ -704,7 +704,7 @@ header {
   }
   .cura-right-grid {
     width: 100%;
-    margin: 3.5rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
   .cura-sec-content img {
     width: 100%;
@@ -743,10 +743,14 @@ header {
     min-height: 25rem;
     border-radius: 0.5rem;
   }
+  .digi-fash-grid img:last-child {
+    grid-column: 1/-1;
+  }
 
   .digi-fash-grid {
     grid-gap: 0.5rem;
     margin: 3.5rem 0 0 0;
+    grid-template-columns: 1fr 1fr;
   }
   .input-box {
     flex-direction: column;
@@ -761,8 +765,8 @@ header {
     padding: 0 2rem;
   }
   .app h3 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
   }
   .app h5 {
     font-size: 2rem;
@@ -771,7 +775,7 @@ header {
     font-size: 2.25rem;
   }
   .web3-grid {
-    grid-gap: 3.5rem;
+    grid-gap: 2rem;
     margin: 3.5rem 0 0 0;
   }
   .pioneer-df-content {
@@ -817,7 +821,7 @@ header {
   .web3-fash-section,
   .footer-content,
   .curation-section {
-    padding: 5rem 0;
+    padding: 6.5rem 0;
   }
   .metaverse-section {
     height: 70vh;
@@ -828,7 +832,7 @@ header {
   }
   .web3-grid p,
   .cura-right-grid p {
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
   }
   .pioneer-digifash-grd {
     background: linear-gradient(
@@ -836,5 +840,8 @@ header {
       rgba(0, 0, 0, 0.25),
       rgba(0, 0, 0, 0.5)
     );
+  }
+  .wwu-section {
+    margin: 6.5rem 0;
   }
 }
