@@ -32,6 +32,7 @@ import {
 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
@@ -62,7 +63,7 @@ function App() {
           y: "-100%",
         },
         {
-          y: 1,
+          y: 0,
           duration: 1,
         }
       )
@@ -266,7 +267,9 @@ function App() {
                     </a>
                   </div>
                   <div className="header-center">
-                    <img src={Logo} alt="" />
+                    <Link to="/">
+                      <img src={Logo} alt="" />
+                    </Link>
                     <div
                       className="header-mob-icon"
                       onClick={() => {
@@ -279,7 +282,9 @@ function App() {
                     <div className="header-navbar">
                       <a href="#">AboutUs</a>
                       <a href="#">DigitalFashion</a>
-                      <a href="#">LearnNFTs</a>
+                      <Link to="/learnnfts">
+                        <a href="#">LearnNFTs</a>
+                      </Link>
                     </div>
                   </div>
                   <div className="header-right">
@@ -494,7 +499,9 @@ function App() {
               <div className="header-mob-links">
                 <a href="#">AboutUs</a>
                 <a href="#">DigitalFashion</a>
-                <a href="#">LearnNFTs</a>
+                <Link to="/learnnfts">
+                  <a href="#">LearnNFTs</a>
+                </Link>
               </div>
               <div className="header-mob-bottom">
                 <div className="header-mob-icons">
