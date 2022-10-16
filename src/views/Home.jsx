@@ -276,9 +276,7 @@ function App() {
                     <div className="header-navbar">
                       <a href="#">AboutUs</a>
                       <a href="#">DigitalFashion</a>
-                      <Link to="/learnnfts">
-                        <a href="#">LearnNFTs</a>
-                      </Link>
+                      <Link to="/learnnfts">LearnNFTs</Link>
                     </div>
                   </div>
                   <div className="header-right">
@@ -582,9 +580,7 @@ function App() {
               <div className="header-mob-links">
                 <a href="#">AboutUs</a>
                 <a href="#">DigitalFashion</a>
-                <Link to="/learnnfts">
-                  <a href="#">LearnNFTs</a>
-                </Link>
+                <Link to="/learnnfts">LearnNFTs</Link>
               </div>
               <div className="header-mob-bottom">
                 <div className="header-mob-icons">
