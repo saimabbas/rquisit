@@ -1018,6 +1018,9 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5rem;
   }
+  .editorial-grid-card a {
+    font-size: 1.75rem;
+  }
   .welcome-head h2,
   .editorial-head h2,
   .blog-section > h2 {
