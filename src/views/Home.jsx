@@ -274,8 +274,9 @@ function App() {
                       <div></div>
                     </div>
                     <div className="header-navbar">
-                      <a href="#">AboutUs</a>
-                      <a href="#">DigitalFashion</a>
+                      <Link to="/">Home</Link>
+                      <Link to="/about">AboutUs</Link>
+                      <Link to="/digitalfashion">DigitalFashion</Link>
                       <Link to="/learnnfts">LearnNFTs</Link>
                     </div>
                   </div>
@@ -578,8 +579,9 @@ function App() {
                 <MdClose />
               </div>
               <div className="header-mob-links">
-                <a href="#">AboutUs</a>
-                <a href="#">DigitalFashion</a>
+                <Link to="/">Home</Link>
+                <Link to="/about">AboutUs</Link>
+                <Link to="/digitalfashion">DigitalFashion</Link>
                 <Link to="/learnnfts">LearnNFTs</Link>
               </div>
               <div className="header-mob-bottom">
