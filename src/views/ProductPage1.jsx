@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BsTwitter, BsInstagram, BsGlobe } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
@@ -13,9 +13,15 @@ import DigiWorld3 from "../assets/img/dw-img-3.jpeg";
 import Web3 from "../assets/img/web3.jpg";
 import Designer from "../assets/img/designer.png";
 import CuraImg from "../assets/img/teal-img.png";
+import P1 from "../assets/img/p1.png";
+import P2 from "../assets/img/p2.png";
+import P3 from "../assets/img/p3.mp4";
 import Metaverse from "../assets/img/metaverse.png";
 import Workwithus from "../assets/img/work.jpg";
+import CeoImg from "../assets/img/ceo-img.jpeg";
+import RFAQBg from "../assets/img/ivanroyo (4).jpg";
 import { MdClose } from "react-icons/md";
+import { BsPlus, BsDash } from "react-icons/bs";
 import { gsap } from "gsap";
 import {
   Back,
@@ -32,9 +38,20 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper";
+import Accordion from "react-bootstrap/Accordion";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   useEffect(() => {
     ScrollSmoother.create({
@@ -64,27 +81,32 @@ function App() {
           duration: 1,
         }
       )
+
       .fromTo(
-        ".hero-head-left h1",
+        ".about-hero-content > img",
         {
-          x: "115%",
+          x: "-10rem",
+          opacity: 0,
         },
         {
           x: 0,
+          opacity: 1,
           duration: 1,
         },
-        "<0"
+        0
       )
       .fromTo(
-        ".hero-head-right h1",
+        ".about-hero-content > div",
         {
-          x: "-115%",
+          x: "10rem",
+          opacity: 0,
         },
         {
           x: 0,
+          opacity: 1,
           duration: 1,
         },
-        "<0"
+        0
       );
     let threeImagesAnim = gsap.timeline({
       scrollTrigger: {
@@ -232,21 +254,145 @@ function App() {
     <div className="smooth-wrapper" id="smooth-wrapper">
       <div id="smooth-content">
         <div className="app">
-          <section className="hero-section df-hero">
-            <img src={BGC} alt="Hero-img" data-speed={0.95} />
-            <div className="hero-content">
-              <div className="hero-head" data-speed={1.75}>
-                <div className="hero-head-left">
-                  <h1>future</h1>
+          <section className="product-details-section">
+            <div className="box">
+              <div className="product-details-grid">
+                <div className="pdg-left">
+                  <Swiper
+                    style={{
+                      "--swiper-navigation-color": "#fff",
+                      "--swiper-pagination-color": "#fff",
+                    }}
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    navigation={true}
+                    thumbs={{
+                      swiper:
+                        thumbsSwiper && !thumbsSwiper.destroyed
+                          ? thumbsSwiper
+                          : null,
+                    }}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper2"
+                  >
+                    <SwiperSlide>
+                      <video loop autoPlay muted>
+                        <source src={P3} type="video/mp4" />
+                      </video>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P2} alt="Product Image" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P1} alt="Product Image" />
+                    </SwiperSlide>
+                  </Swiper>
+                  <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView={3}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper"
+                  >
+                    <SwiperSlide>
+                      <video loop autoPlay muted>
+                        <source src={P3} type="video/mp4" />
+                      </video>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P2} alt="Product Image" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P1} alt="Product Image" />
+                    </SwiperSlide>
+                  </Swiper>
                 </div>
-                <span>|</span>
-                <div className="hero-head-right">
-                  <h1>fashion</h1>
+                <div className="pdg-right">
+                  <h3>“Jaws” - Phygital (Physical +Digital)</h3>
+                  <h6>
+                    <span>Designer: </span> Jacto
+                  </h6>
+                  <h6>
+                    <span>Limited Edition:</span> Only 200 Available
+                  </h6>
+                  <h6 className="product-price">
+                    <span>$260.00</span>
+                  </h6>
+                  <p>
+                    The jaw bones of a <b>Mako Shark</b> are coated in{" "}
+                    <b>24K Gold</b> to create a <b>dramatic collar</b> as the
+                    gold of the necklace waxes and wanes under the light,
+                    creating a mesmerizing rhythm that gracefully changes as you
+                    move. Combining <b>natural beauty</b> and <b>modern edge</b>
+                    , this <b>one-of-a-kind</b> jaw bone turned into a stunning
+                    jewelry necklace collar that looks as dramatic from the
+                    front as it does from the sides as it rests gracefully at
+                    the neckline.
+                  </p>
+                  <a href="#" className="btn-outline">
+                    Buy with Crypto Wallet
+                  </a>
+                  <a href="#" className="btn-black">
+                    Buy with Credit Wallet
+                  </a>
+                  <div className="product-more-details">
+                    <h3>
+                      WHAT YOU WILL <br /> RECEIVE
+                    </h3>
+                    <div className="product-accordion">
+                      <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                          <Accordion.Header>
+                            <div className="acc-header">
+                              <h6>Physical</h6>{" "}
+                              <div className="acc-closed">
+                                <BsPlus />
+                              </div>
+                              <div className="acc-open">
+                                <BsDash />
+                              </div>
+                            </div>
+                          </Accordion.Header>
+                          <Accordion.Body>
+                            "Jaws" is Jacto's first Phyigital (Physical and
+                            Virtual) collection. The jaw bones of a Mako Shark
+                            are coated with a metal-forming process that covers
+                            and protects the jaw while maintaining its original
+                            character. The final layer is plated in 24K Gold to
+                            create a dramatic collar. This is a completely
+                            unique, one-of-a-kind piece that the digital file is
+                            based on.
+                          </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                          <Accordion.Header>
+                            <div className="acc-header">
+                              <h6>Digital</h6>
+                              <div className="acc-closed">
+                                <BsPlus />
+                              </div>
+                              <div className="acc-open">
+                                <BsDash />
+                              </div>
+                            </div>
+                          </Accordion.Header>
+                          <Accordion.Body>
+                            A limited edition NFT.
+                            <br />
+                            <br />A 3D rendering of the gold-plated Mako shark
+                            jaw that can be worn "virtually" as an AR filter, in
+                            pictures, on social media, and camera.
+                          </Accordion.Body>
+                        </Accordion.Item>
+                      </Accordion>
+                    </div>
+                  </div>
                 </div>
               </div>
-              {/* <h1>future | fashion</h1> */}
             </div>
-            <header data-speed={1.75}>
+            <header data-speed={1.75} className="inverted-header">
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
@@ -290,126 +436,7 @@ function App() {
               </div>
             </header>
           </section>
-          <section className="featured-brand-section">
-            <div className="box">
-              <div className="fb-grid">
-                <div className="fb-grid-left">
-                  <video src={OceanVideo} controls></video>
-                </div>
-                <div className="fb-grid-right">
-                  <h2>
-                    FEATURED <br /> BRAND
-                  </h2>
-                  <i>- Jacto</i>
-                  <p>
-                    Jacto is a line of innovative <b>demi-fine jewelry</b>{" "}
-                    hand-made in
-                    <b>NYC</b>. It was founded in 2015 by <b>Melanie Maggio</b>,
-                    a footwear
-                    <b>designer</b> who left behind a lucrative career to create
-                    a sustainable, <b>zero-waste</b> accessory brand using the{" "}
-                    <b>skin, bones,</b> and <b>teeth</b> left over from
-                    commercial fishing. The raw material is sourced from{" "}
-                    <b>sustainable</b> fisheries and then transported to a{" "}
-                    <b>taxidermist</b> upstate, where{" "}
-                    <b>flesh-eating beetles</b> clean it naturally. The bones
-                    are cast on <b>45th Street</b> in the{" "}
-                    <b>Jewelry District</b>, and all the chains and findings are
-                    sourced in <b>Manhattan</b>.
-                  </p>
-                  <a
-                    target={"_blank"}
-                    href="https://shopjacto.com/pages/jacto_jewelry"
-                  >
-                    <i>website</i>
-                    <BsGlobe />
-                  </a>
-                  <a
-                    target={"_blank"}
-                    href="https://www.instagram.com/jacto_jewelry/?hl=en"
-                  >
-                    <i>instagram</i>
-                    <BsInstagram />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="seabones-section">
-            <video src={OceanVideo} autoPlay loop muted></video>
-            <div className="box">
-              <div className="seabones-content">
-                <div className="sb-left">
-                  <h2>“SeaBones”</h2>
-                  <h3>Physical + Virtual Collection</h3>
-                </div>
-                <div className="sb-right">
-                  <p>
-                    SeaBones is Jacto's first <b>Phyigital</b> (Physical and
-                    Virtual) collection. Like technology, the ocean holds
-                    mysteries still unknown to humankind; it's also home to some
-                    of the most
-                    <b>exquisite jewels</b> in the world. Here, at the
-                    intersection of the <b>sea</b> and <b>future tech</b>, Jacto
-                    merges sea bones with precious metal and{" "}
-                    <b>Augmented Reality</b> to create a rare and exquisite
-                    collection that is the first of its kind.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="products-section">
-            <div className="box">
-              <div className="products-grid">
-                <a href="/productpage1">
-                  <div className="product-card">
-                    <img src={Jew1White} alt="Jew1White" />
-                    <h5>“Barblings” - Digital Only</h5>
-                    <p>One of a Kind | 24krt Gold Plated</p>
-                    <p>$60</p>
-                  </div>
-                </a>
-                <div className="product-card">
-                  <img src={Jew1White} alt="Jew1White" />
-                  <h5>“Barblings” - Digital Only</h5>
-                  <p>One of a Kind | 24krt Gold Plated</p>
-                  <p>$60</p>
-                </div>
-                <div className="product-card">
-                  <img src={Jew1White} alt="Jew1White" />
-                  <h5>“Barblings” - Digital Only</h5>
-                  <p>One of a Kind | 24krt Gold Plated</p>
-                  <p>$60</p>
-                </div>
-                <div className="product-card">
-                  <img src={Jew1White} alt="Jew1White" />
-                  <h5>“Barblings” - Digital Only</h5>
-                  <p>One of a Kind | 24krt Gold Plated</p>
-                  <p>$60</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div className="digital-worlds">
-            <div className="box">
-              <div className="digital-worlds-content">
-                <h4>
-                  Bridging physical brands to <b>digital worlds.</b>
-                </h4>
-                <div className="digital-worlds-grid digi-fash-grid-pc">
-                  <img src={DigiWorld3} data-speed={1.15} alt="DigiWorld" />
-                  <img src={DigiWorld1} data-speed={1.25} alt="DigiWorld" />
-                  <img src={DigiWorld2} data-speed={1.35} alt="DigiWorld" />
-                </div>
-                <div className="digital-worlds-grid digi-fash-grid-mob">
-                  <img src={DigiWorld3} alt="DigiWorld" />
-                  <img src={DigiWorld1} alt="DigiWorld" />
-                  <img src={DigiWorld2} alt="DigiWorld" />
-                </div>
-              </div>
-            </div>
-          </div>
+
           <footer>
             <div className="box">
               <div className="footer-content">
@@ -497,3 +524,4 @@ function App() {
 export default App;
 
 /* 951753 */
+/* 4725 */

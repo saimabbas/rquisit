@@ -260,7 +260,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <header data-speed={1.75}>
+            <header data-speed={1.75} className="inverted-header">
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
