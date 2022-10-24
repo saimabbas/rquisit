@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BsTwitter, BsInstagram, BsGlobe } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
 import BGC from "../assets/img/digitalfashion-bg.png";
 import OceanVideo from "../assets/video/ocean-video.mp4";
@@ -310,26 +310,24 @@ function App() {
                   </Swiper>
                 </div>
                 <div className="pdg-right">
-                  <h3>“Jaws” - Phygital (Physical +Digital)</h3>
+                  <h3>"Barblings" Digital Only</h3>
                   <h6>
                     <span>Designer: </span> Jacto
                   </h6>
                   <h6>
-                    <span>Limited Edition:</span> Only 200 Available
+                    <span>Limited Edition:</span> One of a kind
                   </h6>
                   <h6 className="product-price">
-                    <span>$260.00</span>
+                    <span>$60.00</span>
                   </h6>
                   <p>
-                    The jaw bones of a <b>Mako Shark</b> are coated in{" "}
-                    <b>24K Gold</b> to create a <b>dramatic collar</b> as the
-                    gold of the necklace waxes and wanes under the light,
-                    creating a mesmerizing rhythm that gracefully changes as you
-                    move. Combining <b>natural beauty</b> and <b>modern edge</b>
-                    , this <b>one-of-a-kind</b> jaw bone turned into a stunning
-                    jewelry necklace collar that looks as dramatic from the
-                    front as it does from the sides as it rests gracefully at
-                    the neckline.
+                    The predatory, ancient Barracuda from the Sphyraena family
+                    has survived for over 50 million years.
+                    <br /> Skulls from the Barracuda are rare, and in this
+                    one-of-a-kind collection, Jacto has hand-painted five
+                    limited edition pieces. The skull is mounted with a hook for
+                    hanging, meant to display as decor on a table, shelf, or
+                    wall.
                   </p>
                   <a href="#" className="btn-outline">
                     Buy with Crypto Wallet
@@ -343,33 +341,10 @@ function App() {
                     </h3>
                     <div className="product-accordion">
                       <Accordion defaultActiveKey="0">
-                        <Accordion.Item eventKey="0">
-                          <Accordion.Header>
-                            <div className="acc-header">
-                              <h6>Physical</h6>{" "}
-                              <div className="acc-closed">
-                                <BsPlus />
-                              </div>
-                              <div className="acc-open">
-                                <BsDash />
-                              </div>
-                            </div>
-                          </Accordion.Header>
-                          <Accordion.Body>
-                            "Jaws" is Jacto's first Phyigital (Physical and
-                            Virtual) collection. The jaw bones of a Mako Shark
-                            are coated with a metal-forming process that covers
-                            and protects the jaw while maintaining its original
-                            character. The final layer is plated in 24K Gold to
-                            create a dramatic collar. This is a completely
-                            unique, one-of-a-kind piece that the digital file is
-                            based on.
-                          </Accordion.Body>
-                        </Accordion.Item>
                         <Accordion.Item eventKey="1">
                           <Accordion.Header>
                             <div className="acc-header">
-                              <h6>Digital</h6>
+                              <h6>Digital Only</h6>
                               <div className="acc-closed">
                                 <BsPlus />
                               </div>
@@ -379,11 +354,11 @@ function App() {
                             </div>
                           </Accordion.Header>
                           <Accordion.Body>
-                            A limited edition NFT.
+                            A limited edition NFT
                             <br />
-                            <br />A 3D rendering of the gold-plated Mako shark
-                            jaw that can be worn "virtually" as an AR filter, in
-                            pictures, on social media, and camera.
+                            <br />A 3D rendering of a Baracuda skull ferronnière
+                            that can be worn "virtually" as an AR filter in
+                            pictures, social media, and on camera.
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
@@ -396,17 +371,17 @@ function App() {
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
-                    <a target="_blank" href="#">
-                      <FaFacebookF />
-                    </a>{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
-                    >
-                      <BsInstagram />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
                     </a>
                     <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaTwitter />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                    >
+                      <FaYoutube />
                     </a>
                   </div>
                   <div className="header-center">
@@ -424,9 +399,9 @@ function App() {
                     </div>
                     <div className="header-navbar">
                       <Link to="/">Home</Link>
-                      <Link to="/about">AboutUs</Link>
                       <Link to="/digitalfashion">DigitalFashion</Link>
                       <Link to="/learnnfts">LearnNFTs</Link>
+                      <Link to="/about">About</Link>
                     </div>
                   </div>
                   <div className="header-right">
@@ -459,17 +434,17 @@ function App() {
                     Jobs
                   </a>
                   <div className="footer-icons">
-                    <a target="_blank" href="">
-                      <FaFacebookF />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/rquisit">
+                      <FaTwitter />
                     </a>
                     <a
                       target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
                     >
-                      <BsInstagram />
-                    </a>
-                    <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaYoutube />
                     </a>
                   </div>
                 </div>
@@ -492,23 +467,23 @@ function App() {
               </div>
               <div className="header-mob-links">
                 <Link to="/">Home</Link>
-                <Link to="/about">AboutUs</Link>
                 <Link to="/digitalfashion">DigitalFashion</Link>
                 <Link to="/learnnfts">LearnNFTs</Link>
+                <Link to="/about">About</Link>
               </div>
               <div className="header-mob-bottom">
                 <div className="header-mob-icons">
-                  <a target="_blank" href="#">
-                    <FaFacebookF />
-                  </a>{" "}
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/rquisit/?hl=en"
-                  >
-                    <BsInstagram />
+                  <a target="_blank" href="https://www.instagram.com/rquisit">
+                    <FaInstagram />
                   </a>
                   <a target="_blank" href="https://twitter.com/rquisit">
-                    <BsTwitter />
+                    <FaTwitter />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                  >
+                    <FaYoutube />
                   </a>
                 </div>
                 <button className="btn-white">CONNECT WALLET</button>

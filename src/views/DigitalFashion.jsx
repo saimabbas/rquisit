@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BsTwitter, BsInstagram, BsGlobe } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
 import BGC from "../assets/img/digitalfashion-bg.png";
 import OceanVideo from "../assets/video/ocean-video.mp4";
 import Jew1White from "../assets/img/jew-img-1-white.png";
 import Jew1Black from "../assets/img/jew-img-1-black.png";
+import Jaw1Black from "../assets/img/jaw-img-1-black.png";
+import Jaw1White from "../assets/img/jaw-img-1-white.png";
 import BGC2 from "../assets/img/bgc2-img.png";
 import DigiWorld1 from "../assets/img/dw-img-1.jpeg";
 import DigiWorld2 from "../assets/img/dw-img-2.jpeg";
@@ -237,11 +239,11 @@ function App() {
             <div className="hero-content">
               <div className="hero-head" data-speed={1.75}>
                 <div className="hero-head-left">
-                  <h1>future</h1>
+                  <h1>universe </h1>
                 </div>
                 <span>|</span>
                 <div className="hero-head-right">
-                  <h1>fashion</h1>
+                  <h1>metaverse</h1>
                 </div>
               </div>
               {/* <h1>future | fashion</h1> */}
@@ -250,17 +252,17 @@ function App() {
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
-                    <a target="_blank" href="#">
-                      <FaFacebookF />
-                    </a>{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
-                    >
-                      <BsInstagram />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
                     </a>
                     <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaTwitter />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                    >
+                      <FaYoutube />
                     </a>
                   </div>
                   <div className="header-center">
@@ -278,9 +280,9 @@ function App() {
                     </div>
                     <div className="header-navbar">
                       <Link to="/">Home</Link>
-                      <Link to="/about">AboutUs</Link>
                       <Link to="/digitalfashion">DigitalFashion</Link>
                       <Link to="/learnnfts">LearnNFTs</Link>
+                      <Link to="/about">About</Link>
                     </div>
                   </div>
                   <div className="header-right">
@@ -303,11 +305,10 @@ function App() {
                   <i>- Jacto</i>
                   <p>
                     Jacto is a line of innovative <b>demi-fine jewelry</b>{" "}
-                    hand-made in
-                    <b>NYC</b>. It was founded in 2015 by <b>Melanie Maggio</b>,
-                    a footwear
-                    <b>designer</b> who left behind a lucrative career to create
-                    a sustainable, <b>zero-waste</b> accessory brand using the{" "}
+                    hand-made in <b>NYC</b>. It was founded in 2015 by{" "}
+                    <b>Melanie Maggio</b>, a footwear <b>designer</b> who left
+                    behind a lucrative career to create a sustainable,{" "}
+                    <b>zero-waste</b> accessory brand using the{" "}
                     <b>skin, bones,</b> and <b>teeth</b> left over from
                     commercial fishing. The raw material is sourced from{" "}
                     <b>sustainable</b> fisheries and then transported to a{" "}
@@ -317,10 +318,7 @@ function App() {
                     <b>Jewelry District</b>, and all the chains and findings are
                     sourced in <b>Manhattan</b>.
                   </p>
-                  <a
-                    target={"_blank"}
-                    href="https://shopjacto.com/pages/jacto_jewelry"
-                  >
+                  <a target={"_blank"} href="https://shopjacto.com/">
                     <i>website</i>
                     <BsGlobe />
                   </a>
@@ -348,10 +346,9 @@ function App() {
                     SeaBones is Jacto's first <b>Phyigital</b> (Physical and
                     Virtual) collection. Like technology, the ocean holds
                     mysteries still unknown to humankind; it's also home to some
-                    of the most
-                    <b>exquisite jewels</b> in the world. Here, at the
-                    intersection of the <b>sea</b> and <b>future tech</b>, Jacto
-                    merges sea bones with precious metal and{" "}
+                    of the most <b>exquisite jewels</b> in the world. Here, at
+                    the intersection of the <b>sea</b> and <b>future tech</b>,
+                    Jacto merges sea bones with precious metal and{" "}
                     <b>Augmented Reality</b> to create a rare and exquisite
                     collection that is the first of its kind.
                   </p>
@@ -370,24 +367,30 @@ function App() {
                     <p>$60</p>
                   </div>
                 </a>
-                <div className="product-card">
-                  <img src={Jew1White} alt="Jew1White" />
-                  <h5>“Barblings” - Digital Only</h5>
-                  <p>One of a Kind | 24krt Gold Plated</p>
-                  <p>$60</p>
-                </div>
-                <div className="product-card">
-                  <img src={Jew1White} alt="Jew1White" />
-                  <h5>“Barblings” - Digital Only</h5>
-                  <p>One of a Kind | 24krt Gold Plated</p>
-                  <p>$60</p>
-                </div>
-                <div className="product-card">
-                  <img src={Jew1White} alt="Jew1White" />
-                  <h5>“Barblings” - Digital Only</h5>
-                  <p>One of a Kind | 24krt Gold Plated</p>
-                  <p>$60</p>
-                </div>
+                <a href="/productpage2">
+                  <div className="product-card">
+                    <img src={Jew1Black} alt="Jew1White" />
+                    <h5>“Barblings” - Phygital (Physical + Digital)</h5>
+                    <p>Limited Edition | Only 200 Available</p>
+                    <p>$260</p>
+                  </div>
+                </a>
+                <a href="/productpage3">
+                  <div className="product-card">
+                    <img src={Jaw1White} alt="Jew1White" />
+                    <h5>“Jaws” - Digital</h5>
+                    <p>Limited Edition | Only 200 Available</p>
+                    <p>$60</p>
+                  </div>
+                </a>
+                <a href="/productpage4">
+                  <div className="product-card">
+                    <img src={Jaw1Black} alt="Jew1White" />
+                    <h5>“Jaws” - Phygital (Physical + Digital)</h5>
+                    <p>One of a Kind | 24krt Gold Plated</p>
+                    <p>$8,000.00</p>
+                  </div>
+                </a>
               </div>
             </div>
           </section>
@@ -397,12 +400,8 @@ function App() {
                 <h4>
                   Bridging physical brands to <b>digital worlds.</b>
                 </h4>
-                <div className="digital-worlds-grid digi-fash-grid-pc">
-                  <img src={DigiWorld3} data-speed={1.15} alt="DigiWorld" />
-                  <img src={DigiWorld1} data-speed={1.25} alt="DigiWorld" />
-                  <img src={DigiWorld2} data-speed={1.35} alt="DigiWorld" />
-                </div>
-                <div className="digital-worlds-grid digi-fash-grid-mob">
+
+                <div className="digital-worlds-grid">
                   <img src={DigiWorld3} alt="DigiWorld" />
                   <img src={DigiWorld1} alt="DigiWorld" />
                   <img src={DigiWorld2} alt="DigiWorld" />
@@ -432,17 +431,17 @@ function App() {
                     Jobs
                   </a>
                   <div className="footer-icons">
-                    <a target="_blank" href="">
-                      <FaFacebookF />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/rquisit">
+                      <FaTwitter />
                     </a>
                     <a
                       target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
                     >
-                      <BsInstagram />
-                    </a>
-                    <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaYoutube />
                     </a>
                   </div>
                 </div>
@@ -465,23 +464,23 @@ function App() {
               </div>
               <div className="header-mob-links">
                 <Link to="/">Home</Link>
-                <Link to="/about">AboutUs</Link>
                 <Link to="/digitalfashion">DigitalFashion</Link>
                 <Link to="/learnnfts">LearnNFTs</Link>
+                <Link to="/about">About</Link>
               </div>
               <div className="header-mob-bottom">
                 <div className="header-mob-icons">
-                  <a target="_blank" href="#">
-                    <FaFacebookF />
-                  </a>{" "}
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/rquisit/?hl=en"
-                  >
-                    <BsInstagram />
+                  <a target="_blank" href="https://www.instagram.com/rquisit">
+                    <FaInstagram />
                   </a>
                   <a target="_blank" href="https://twitter.com/rquisit">
-                    <BsTwitter />
+                    <FaTwitter />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                  >
+                    <FaYoutube />
                   </a>
                 </div>
                 <button className="btn-white">CONNECT WALLET</button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
 import BGC from "../assets/img/bgc-img.jpg";
 import BGC2 from "../assets/img/bgc2-img.png";
@@ -9,6 +9,7 @@ import DigiFash2 from "../assets/img/digi2.jpg";
 import DigiFash3 from "../assets/img/digi3.jpeg";
 import Web3 from "../assets/img/web3.jpg";
 import Designer from "../assets/img/designer.png";
+import RFAQBg from "../assets/img/ivanroyo (4).jpg";
 import CuraImg from "../assets/img/teal-img.png";
 import Metaverse from "../assets/img/metaverse.png";
 import Workwithus from "../assets/img/work.jpg";
@@ -247,17 +248,17 @@ function App() {
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
-                    <a target="_blank" href="#">
-                      <FaFacebookF />
-                    </a>{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
-                    >
-                      <BsInstagram />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
                     </a>
                     <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaTwitter />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                    >
+                      <FaYoutube />
                     </a>
                   </div>
                   <div className="header-center">
@@ -275,9 +276,9 @@ function App() {
                     </div>
                     <div className="header-navbar">
                       <Link to="/">Home</Link>
-                      <Link to="/about">AboutUs</Link>
                       <Link to="/digitalfashion">DigitalFashion</Link>
                       <Link to="/learnnfts">LearnNFTs</Link>
+                      <Link to="/about">About</Link>
                     </div>
                   </div>
                   <div className="header-right">
@@ -309,7 +310,7 @@ function App() {
           </section>
           <section className="pioneer-digifash">
             <div className="pioneer-digifash-grd"></div>
-            <img src={BGC2} alt="" />
+            <img src={DigiFash2} alt="" />
             <div className="box">
               <div className="pioneer-df-content">
                 <h3>PIONEERING DIGITAL FASHION</h3>
@@ -345,13 +346,12 @@ function App() {
                       <strong>Blockchain</strong> technology is changing our
                       relationship to the internet and how we engage with it.
                       It's becoming far more <strong>interactive</strong> as
-                      immersive
-                      <strong>augmented reality</strong> experiences come to
-                      replace passive forms of engagement. <br />
+                      immersive <strong>augmented reality</strong> experiences
+                      come to replace passive forms of engagement. <br />
                       <br />
                       Digital <strong>collectibles</strong> have the ability to
                       redefine how brands and consumers connect to one another.
-                      We see <strong>NFT</strong> trends shifting towards a more
+                      We see <strong>NFT</strong> trends shifting towards a more{" "}
                       <strong>tangible</strong> type of <strong>value</strong>,
                       one where consumer-brand relations can be taken to a whole
                       new level. <br />
@@ -360,7 +360,7 @@ function App() {
                       <strong>ticket</strong> to a fashion show or hold{" "}
                       <strong>voting power</strong> on color choices for a new
                       collection. The sky is the limit, and we're excited to
-                      push this new <strong>revolution</strong> forward
+                      push this new <strong>revolution</strong> forward.
                     </p>
                   </div>
                 </div>
@@ -381,8 +381,7 @@ function App() {
                   <strong> designers </strong> emerging into{" "}
                   <strong>Web3</strong> is a core part of our ethos, whether
                   through <strong>mentorship</strong> initiatives or our
-                  in-house
-                  <strong>services.</strong>
+                  in-house <strong>services.</strong>
                 </p>
               </div>
             </div>
@@ -394,8 +393,7 @@ function App() {
                   <h3>COLLECTIBLE CURATION</h3>
                   <p>
                     A pioneer in innovation, <strong>Rquisit</strong> is the
-                    first
-                    <strong>fashion destination</strong> that delivers the
+                    first <strong>fashion destination</strong> that delivers the
                     ultimate
                     <strong> curation</strong> of digital fashion and Web3
                     content. We're working hand-in-hand with fashion brands to
@@ -407,7 +405,7 @@ function App() {
                     holder.
                   </p>
                 </div>
-                <img src={CuraImg} alt="" />
+                <img src={RFAQBg} alt="" />
               </div>
             </section>
           </div>
@@ -436,7 +434,7 @@ function App() {
             </div>
           </section>
           <section className="metaverse-section wwu-section">
-            <img src={Workwithus} alt="" />
+            {/* <img src={Workwithus} alt="" /> */}
             <div className="box">
               <div className="metaverse-content wwu-content">
                 <h3>APPLY TO WORK WITH US</h3>
@@ -487,17 +485,17 @@ function App() {
                     Jobs
                   </a>
                   <div className="footer-icons">
-                    <a target="_blank" href="">
-                      <FaFacebookF />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/rquisit">
+                      <FaTwitter />
                     </a>
                     <a
                       target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
                     >
-                      <BsInstagram />
-                    </a>
-                    <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaYoutube />
                     </a>
                   </div>
                 </div>
@@ -580,23 +578,23 @@ function App() {
               </div>
               <div className="header-mob-links">
                 <Link to="/">Home</Link>
-                <Link to="/about">AboutUs</Link>
                 <Link to="/digitalfashion">DigitalFashion</Link>
                 <Link to="/learnnfts">LearnNFTs</Link>
+                <Link to="/about">About</Link>
               </div>
               <div className="header-mob-bottom">
                 <div className="header-mob-icons">
-                  <a target="_blank" href="#">
-                    <FaFacebookF />
-                  </a>{" "}
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/rquisit/?hl=en"
-                  >
-                    <BsInstagram />
+                  <a target="_blank" href="https://www.instagram.com/rquisit">
+                    <FaInstagram />
                   </a>
                   <a target="_blank" href="https://twitter.com/rquisit">
-                    <BsTwitter />
+                    <FaTwitter />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                  >
+                    <FaYoutube />
                   </a>
                 </div>
                 <button className="btn-white">CONNECT WALLET</button>

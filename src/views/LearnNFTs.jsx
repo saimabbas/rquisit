@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
 import BGC from "../assets/img/learnnfts-hero.png";
 import GetStartedBG from "../assets/img/getstarted-bg.png";
@@ -240,11 +240,11 @@ function App() {
             <div className="hero-content">
               <div className="hero-head" data-speed={1.75}>
                 <div className="hero-head-left">
-                  <h1>future</h1>
+                  <h1>view</h1>
                 </div>
                 <span>|</span>
                 <div className="hero-head-right">
-                  <h1>fashion</h1>
+                  <h1> explore</h1>
                 </div>
               </div>
               {/* <h1>future | fashion</h1> */}
@@ -253,17 +253,17 @@ function App() {
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
-                    <a target="_blank" href="#">
-                      <FaFacebookF />
-                    </a>{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
-                    >
-                      <BsInstagram />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
                     </a>
                     <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaTwitter />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                    >
+                      <FaYoutube />
                     </a>
                   </div>
                   <div className="header-center">
@@ -281,9 +281,9 @@ function App() {
                     </div>
                     <div className="header-navbar">
                       <Link to="/">Home</Link>
-                      <Link to="/about">AboutUs</Link>
                       <Link to="/digitalfashion">DigitalFashion</Link>
                       <Link to="/learnnfts">LearnNFTs</Link>
+                      <Link to="/about">About</Link>
                     </div>
                   </div>
                   <div className="header-right">
@@ -349,22 +349,22 @@ function App() {
                 </div>
                 <div className="getstarted-videos-grid">
                   <iframe
-                    src="https://www.youtube.com/embed/Y0kBOlM4WOg"
-                    title="Why Do NFT's Matter?"
+                    src="https://www.youtube.com/embed/Z3QzeVpRazs"
+                    title="How to set up an account on Coinbase"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
                   <iframe
-                    src="https://www.youtube.com/embed/qolNFm5u3r4"
-                    title="A Brief History of NFTs"
+                    src="https://www.youtube.com/embed/amB9oBE_o0Y"
+                    title="How to set up a crypto wallet on Coinbase"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
                   <iframe
-                    src="https://www.youtube.com/embed/HKAnyX6sfmU"
-                    title="What are CC0 NFT's?"
+                    src="https://www.youtube.com/embed/78dNXN0g61E"
+                    title="How to locate your crypto wallet address"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -400,7 +400,12 @@ function App() {
                   <h2>EDITORIAL</h2>
                   <h5>
                     Explore featured articles from digital fashion editor{" "}
-                    <a href="#">@astroporcelain</a>
+                    <a
+                      href="https://twitter.com/astroporcelain"
+                      target={"_blank"}
+                    >
+                      @astroporcelain
+                    </a>
                   </h5>
                 </div>
 
@@ -464,17 +469,17 @@ function App() {
                     Jobs
                   </a>
                   <div className="footer-icons">
-                    <a target="_blank" href="">
-                      <FaFacebookF />
+                    <a target="_blank" href="https://www.instagram.com/rquisit">
+                      <FaInstagram />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/rquisit">
+                      <FaTwitter />
                     </a>
                     <a
                       target="_blank"
-                      href="https://www.instagram.com/rquisit/?hl=en"
+                      href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
                     >
-                      <BsInstagram />
-                    </a>
-                    <a target="_blank" href="https://twitter.com/rquisit">
-                      <BsTwitter />
+                      <FaYoutube />
                     </a>
                   </div>
                 </div>
@@ -497,23 +502,23 @@ function App() {
               </div>
               <div className="header-mob-links">
                 <Link to="/">Home</Link>
-                <Link to="/about">AboutUs</Link>
                 <Link to="/digitalfashion">DigitalFashion</Link>
                 <Link to="/learnnfts">LearnNFTs</Link>
+                <Link to="/about">About</Link>
               </div>
               <div className="header-mob-bottom">
                 <div className="header-mob-icons">
-                  <a target="_blank" href="#">
-                    <FaFacebookF />
-                  </a>{" "}
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/rquisit/?hl=en"
-                  >
-                    <BsInstagram />
+                  <a target="_blank" href="https://www.instagram.com/rquisit">
+                    <FaInstagram />
                   </a>
                   <a target="_blank" href="https://twitter.com/rquisit">
-                    <BsTwitter />
+                    <FaTwitter />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCvD0lzOvGeynbzFzLTgEuNQ?app=desktop"
+                  >
+                    <FaYoutube />
                   </a>
                 </div>
                 <button className="btn-white">CONNECT WALLET</button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BsTwitter, BsInstagram, BsGlobe } from "react-icons/bs";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
@@ -13,11 +13,15 @@ import DigiWorld3 from "../assets/img/dw-img-3.jpeg";
 import Web3 from "../assets/img/web3.jpg";
 import Designer from "../assets/img/designer.png";
 import CuraImg from "../assets/img/teal-img.png";
+import P1 from "../assets/img/p1.png";
+import P2 from "../assets/img/p2.png";
+import P3 from "../assets/img/p3.mp4";
 import Metaverse from "../assets/img/metaverse.png";
 import Workwithus from "../assets/img/work.jpg";
 import CeoImg from "../assets/img/ceo-img.jpeg";
 import RFAQBg from "../assets/img/ivanroyo (4).jpg";
 import { MdClose } from "react-icons/md";
+import { BsPlus, BsDash } from "react-icons/bs";
 import { gsap } from "gsap";
 import {
   Back,
@@ -34,9 +38,20 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper";
+import Accordion from "react-bootstrap/Accordion";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   useEffect(() => {
     ScrollSmoother.create({
@@ -239,24 +254,140 @@ function App() {
     <div className="smooth-wrapper" id="smooth-wrapper">
       <div id="smooth-content">
         <div className="app">
-          <section className="about-hero-section">
+          <section className="product-details-section">
             <div className="box">
-              <div className="about-hero-content">
-                <img src={CeoImg} alt="" />
-                <div>
-                  <h2>OUR STORY</h2>
+              <div className="product-details-grid">
+                <div className="pdg-left">
+                  <Swiper
+                    style={{
+                      "--swiper-navigation-color": "#fff",
+                      "--swiper-pagination-color": "#fff",
+                    }}
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    navigation={true}
+                    thumbs={{
+                      swiper:
+                        thumbsSwiper && !thumbsSwiper.destroyed
+                          ? thumbsSwiper
+                          : null,
+                    }}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper2"
+                  >
+                    <SwiperSlide>
+                      <video loop autoPlay muted>
+                        <source src={P3} type="video/mp4" />
+                      </video>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P2} alt="Product Image" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P1} alt="Product Image" />
+                    </SwiperSlide>
+                  </Swiper>
+                  <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView={3}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper"
+                  >
+                    <SwiperSlide>
+                      <video loop autoPlay muted>
+                        <source src={P3} type="video/mp4" />
+                      </video>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P2} alt="Product Image" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={P1} alt="Product Image" />
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+                <div className="pdg-right">
+                  <h3>"Jaws" Phygital (Physical + Digital)</h3>
+                  <h6>
+                    <span>Designer: </span> Jacto
+                  </h6>
+                  <h6>
+                    <span>Limited Edition:</span> One of a kind
+                  </h6>
+                  <h6 className="product-price">
+                    <span>$8000.00</span>
+                  </h6>
                   <p>
-                    Rquisit is a <b>marketplace</b> and <b>creative agency</b>{" "}
-                    for <b>digital fashion</b> founded by <b>Rebecca</b>, a
-                    multi-hyphenate <b>startup founder</b> who has been engaged
-                    in <b>Web3</b> since <b>2018</b>. Noticing the challenges
-                    the fashion industry faces, from{" "}
-                    <b>unsustainable production</b> practices to{" "}
-                    <b>body shaming</b> marketing, Rebecca saw the
-                    <b>potential</b> for <b>blockchain technology</b> to{" "}
-                    <b>revolutionize</b> how brands operate. This is what
-                    inspired Rquisit - a digital fashion marketplace.
+                    The jaw bones of a Mako Shark are coated in 24K Gold to
+                    create a dramatic collar as the gold of the necklace waxes
+                    and wanes under the light, creating a mesmerizing rhythm
+                    that gracefully changes as you move. Combining natural
+                    beauty and modern edge, this one-of-a-kind jaw bone turned
+                    into a stunning jewelry necklace collar that looks as
+                    dramatic from the front as it does from the sides as it
+                    rests gracefully at the neckline.
                   </p>
+                  <a href="#" className="btn-outline">
+                    Buy with Crypto Wallet
+                  </a>
+                  <a href="#" className="btn-black">
+                    Buy with Credit Wallet
+                  </a>
+                  <div className="product-more-details">
+                    <h3>
+                      WHAT YOU WILL <br /> RECEIVE
+                    </h3>
+                    <div className="product-accordion">
+                      <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                          <Accordion.Header>
+                            <div className="acc-header">
+                              <h6>Physical</h6>{" "}
+                              <div className="acc-closed">
+                                <BsPlus />
+                              </div>
+                              <div className="acc-open">
+                                <BsDash />
+                              </div>
+                            </div>
+                          </Accordion.Header>
+                          <Accordion.Body>
+                            "Jaws" is Jacto's first Phyigital (Physical and
+                            Virtual) collection. The jaw bones of a Mako Shark
+                            are coated with a metal-forming process that covers
+                            and protects the jaw while maintaining its original
+                            character. The final layer is plated in 24K Gold to
+                            create a dramatic collar. This is a completely
+                            unique, one-of-a-kind piece that the digital file is
+                            based on.
+                          </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                          <Accordion.Header>
+                            <div className="acc-header">
+                              <h6>Digital</h6>
+                              <div className="acc-closed">
+                                <BsPlus />
+                              </div>
+                              <div className="acc-open">
+                                <BsDash />
+                              </div>
+                            </div>
+                          </Accordion.Header>
+                          <Accordion.Body>
+                            A limited edition NFT
+                            <br />
+                            <br />A 3D rendering of the gold-plated Mako shark
+                            jaw that can be worn "virtually" as an AR filter, in
+                            pictures, on social media, and camera.
+                          </Accordion.Body>
+                        </Accordion.Item>
+                      </Accordion>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -304,151 +435,7 @@ function App() {
               </div>
             </header>
           </section>
-          <section className="r-faq">
-            <img src={RFAQBg} alt="" />
-            <div className="box">
-              <div className="r-faq-content">
-                <h2>RQUISIT FAQs</h2>
-                <div>
-                  <h3>WHAT IS RQUISIT?</h3>
-                  <p>
-                    Rquisit is a marketplace for fashion NFT’s. A pioneer in
-                    innovation, Rquisit delivers the ultimate curation of
-                    fashion NFT’s and web3 content. Transitioning fashion
-                    designers to web3 is a core part of our ethos. With the
-                    world’s most coveted designer brands, like Tiffany’s, Coach,
-                    and many more entering Web3, Rquisit intends to be the
-                    premier fashion destination in the metaverse.
-                  </p>
-                </div>
-                <div>
-                  <h3>
-                    WHAT IS THE DIFFERENCE BETWEEN RQUISIT AND OPENSEA (OR OTHER
-                    NFT MARKETPLACES)?
-                  </h3>
-                  <p>
-                    Rquisit vets, onboards, and curates fashion NFT’s with
-                    utility in mind.
-                    <br />
-                    <br />
-                    Rquisit is not only for those with crypto-experience. Our
-                    aim is to onboard both fashion designers and fashion lovers
-                    - that is why we provide the educational resources to teach
-                    you how to get started and keep you updated on the latest
-                    trends.
-                  </p>
-                </div>
-                <div>
-                  <h3>HOW CAN I ATTEND RQUISIT’S EVENTS?</h3>
-                  <p>
-                    Find us in Decentraland. Follow us on twitter to stay
-                    up-to-date on the latest happenings.
-                  </p>
-                </div>
-                <div>
-                  <h3>WHAT BLOCKCHAIN IS RQUISIT ON?</h3>
-                  <p>
-                    Ethereum with the plan to expand to multi-chain in the near
-                    future.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="r-faq r-faq-2">
-            <div className="box">
-              <div className="r-faq-content">
-                <h2>RQUISIT FAQs</h2>
-                <div>
-                  <h3>WHAT IS A NON-FUNGIBLE TOKEN (NFT)?</h3>
-                  <p>
-                    NFTs could be a ticket to a fashion show, exclusive events,
-                    or a vote on a future collection. NFT is short for
-                    Non-Fungible Token and unlike its fungible counterparts such
-                    as freely interchangeable cryptocurrencies, NFTs are not
-                    interchangeable.
-                    <br />
-                    <br />
-                    For example, a fungible token like Bitcoin is
-                    interchangeable for something of similar value. One Bitcoin
-                    can be exchanged for Ethereum (another fungible token) of a
-                    similar value (that is ETH equivalent to the value of 1
-                    BTC). That is not the case for NFT as its unique properties
-                    mean one NFT cannot be exchanged for another, as they cannot
-                    be of similar value.
-                    <br />
-                    <br />
-                    You can learn more about What is an NFT on our blog.
-                  </p>
-                </div>
-                <div>
-                  <h3>HOW TO BUY / MINT AN NFT?</h3>
-                  <p>
-                    You will need to create a crypto wallet such as MetaMask or
-                    Coinbase, and then connect your wallet to rquisit.com. When
-                    purchasing an NFT please note that you might incur gas fees
-                    (transaction costs).
-                  </p>
-                </div>
-                <div>
-                  <h3>WHAT IS A CRYPTO WALLET? WHY DO I NEED ONE?</h3>
-                  <p>
-                    A crypto wallet is an application or hardware device that
-                    allows individuals to store and transfer digital assets like
-                    cryptocurrencies and Non-Fungible Tokens (NFTs). There are
-                    several providers available, with MetaMask being the most
-                    popular one.
-                    <br />
-                    <br />
-                    After you register and download any crypto wallet, you take
-                    control of two 42-character keys. This is a public key,
-                    known as your wallet address, and a private key. You might
-                    consider your public key to be like your shareable bank
-                    account info, so you only have to copy and paste when people
-                    ask for your address. Your private key works like a password
-                    and should always remain private, for security.
-                    <br />
-                    <br />
-                    Creating a crypto wallet is essential to transact with
-                    cryptocurrencies or NFTs, either on Rquisit or any other
-                    marketplace.
-                    <br />
-                    <br />
-                    For further information on how to set-up a MetaMask wallet,
-                    please see our blog post.
-                  </p>
-                </div>
-                <div>
-                  <h3>HOW DO I PURCHASE ETHEREUM (ETH)?</h3>
-                  <p>
-                    To deposit Ethereum on a MetaMask wallet you can either
-                    transfer ETH from a centralized exchange such as Coinbase,
-                    Binance or Kraken to your wallet, using your wallet’s public
-                    address (starting by 0x…) as destination. Or, you may use
-                    for instance MoonPay (https://www.moonpay.com/buy) to buy
-                    ETH with your credit card and have it sent to your MetaMask
-                    wallet.
-                    <br />
-                    <br />
-                    For further information, please refer to the following
-                    tutorial:
-                    https://metamask.zendesk.com/hc/en-us/articles/360028141672-Direct-deposit-receive-tokens-to-your-MetaMask-wallet
-                  </p>
-                </div>
-                <div>
-                  <h3>WHAT ARE GAS FEES?</h3>
-                  <p>
-                    Gas fees are the transaction paid in proof-of-work mining
-                    models, such as the Ethereum or Bitcoin. Miners represent
-                    decentralized computers that use computing power to process
-                    and enable transactions. For every transaction, miners get
-                    paid via gas fees. These fees guarantee that transactions
-                    are processed on the blockchain.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+
           <footer>
             <div className="box">
               <div className="footer-content">
@@ -536,3 +523,4 @@ function App() {
 export default App;
 
 /* 951753 */
+/* 4725 */
