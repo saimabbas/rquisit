@@ -249,7 +249,7 @@ function App() {
               </div>
               {/* <h1>future | fashion</h1> */}
             </div>
-            <header data-speed={1.75}>
+            <header>
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
@@ -440,7 +440,7 @@ function App() {
                   Showtime to hear of
                   <b> new drops</b> and <b>collabs!</b>
                 </p>
-                <a href="" className="btn-white">
+                <a href="https://showtime.xyz/rquisit" className="btn-white">
                   follow us
                 </a>
               </div>
@@ -451,17 +451,17 @@ function App() {
             <div className="box">
               <div className="footer-content">
                 <div className="footer-grid">
-                  <a href="#">About</a>
+                  <a href="/about">About</a>
                   <a href="#">Privacy</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/terms-of-service">
                     Terms of Service
                   </a>
                   <a href="#">Partnership</a>
-                  <a href="#">Contact us</a>
+                  <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
                 <div className="footer-grid">
                   <a href="#">FAQ</a>
-                  <a href="#">Education</a>
+                  <a href="/learnnfts">Education</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/refund-policy">
                     Refund Policy
                   </a>

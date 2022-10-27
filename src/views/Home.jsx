@@ -10,7 +10,7 @@ import DigiFash3 from "../assets/img/digi3.jpeg";
 import Web3 from "../assets/img/web3.jpg";
 import Designer from "../assets/img/designer.png";
 import RFAQBg from "../assets/img/ivanroyo (4).jpg";
-import CuraImg from "../assets/img/teal-img.png";
+import PioneeringBG from "../assets/img/pioneering-bg.png";
 import Metaverse from "../assets/img/metaverse.png";
 import Workwithus from "../assets/img/work.jpg";
 import { MdClose } from "react-icons/md";
@@ -244,7 +244,7 @@ function App() {
               </div>
               {/* <h1>future | fashion</h1> */}
             </div>
-            <header data-speed={1.75}>
+            <header>
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
@@ -310,7 +310,7 @@ function App() {
           </section>
           <section className="pioneer-digifash">
             <div className="pioneer-digifash-grd"></div>
-            <img src={DigiFash2} alt="" />
+            <img src={PioneeringBG} alt="" />
             <div className="box">
               <div className="pioneer-df-content">
                 <h3>PIONEERING DIGITAL FASHION</h3>
@@ -440,7 +440,7 @@ function App() {
                 <h3>APPLY TO WORK WITH US</h3>
                 <a
                   target={"_blank"}
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdMkYl3RtKCUzOOrKo79OLNRs-iCvwwrUBII07GeRmU2Qv9OQ/viewform"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScJXFfO58d9LJ5kSZxwEaNFPbptvlOmrX66BWykarkbzTLKfQ/viewform?vc=0&c=0&w=1&flr=0"
                   className="btn-white"
                 >
                   Click Here
@@ -467,17 +467,17 @@ function App() {
             <div className="box">
               <div className="footer-content">
                 <div className="footer-grid">
-                  <a href="#">About</a>
+                  <a href="/about">About</a>
                   <a href="#">Privacy</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/terms-of-service">
                     Terms of Service
                   </a>
                   <a href="#">Partnership</a>
-                  <a href="#">Contact us</a>
+                  <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
                 <div className="footer-grid">
                   <a href="#">FAQ</a>
-                  <a href="#">Education</a>
+                  <a href="/learnnfts">Education</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/refund-policy">
                     Refund Policy
                   </a>

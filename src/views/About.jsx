@@ -34,10 +34,23 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+// import $ from "jquery";
+import { HashLink as Linka } from "react-router-hash-link";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
+  /* $(document).ready(function () {
+    $("a[href*=\\#]").on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate(
+        {
+          scrollTop: $(this.hash).offset().top,
+        },
+        500
+      );
+    });
+  }); */
   useEffect(() => {
     ScrollSmoother.create({
       smooth: 1.25,
@@ -260,7 +273,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <header data-speed={1.75} className="inverted-header">
+            <header className="inverted-header">
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
@@ -453,17 +466,19 @@ function App() {
             <div className="box">
               <div className="footer-content">
                 <div className="footer-grid">
-                  <a href="#">About</a>
-                  <a href="#">Privacy</a>
+                  <a href="/about">About</a>
+                  <a href="/legal/#privacy">Privacy</a>
+                  <Linka to="/legal#privacy">Your link text</Linka>
+
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/terms-of-service">
                     Terms of Service
                   </a>
                   <a href="#">Partnership</a>
-                  <a href="#">Contact us</a>
+                  <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
                 <div className="footer-grid">
                   <a href="#">FAQ</a>
-                  <a href="#">Education</a>
+                  <a href="/learnnfts">Education</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/refund-policy">
                     Refund Policy
                   </a>

@@ -875,6 +875,9 @@ header {
   padding: 2rem 0;
   font-size: 2rem;
 }
+.showtime-text a:hover {
+  color: var(--white);
+}
 .blog-section {
   position: relative;
   z-index: 2;
@@ -966,6 +969,7 @@ header {
   z-index: 2;
   object-fit: cover;
   object-position: bottom center;
+  filter: brightness(0.5);
 }
 .seabones-content {
   width: 100%;
@@ -1319,6 +1323,55 @@ header {
 .accordion-button::after {
   display: none;
 }
+.legal-section {
+  width: 100%;
+  padding: 20rem 0 0 0;
+  color: var(--black);
+}
+.legal-content h2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  opacity: 0.75;
+  font-style: italic;
+}
+.legal-content h3 {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.legal-content h4 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.legal-content ul {
+  padding: 0 0 0 5rem;
+  width: 100%;
+}
+.legal-content ul li {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+.legal-content a {
+  color: var(--black);
+  text-decoration: underline;
+}
+.legal-content a:hover {
+  color: var(--black);
+}
+.legal-content p b {
+  font-weight: 700;
+}
+.divider {
+  width: 100%;
+  margin: 10rem 0;
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.15;
+}
+.p-padding {
+  padding: 0 0 0 5rem;
+}
 /* RESPONSIVENESS */
 @media only screen and (max-width: 1100px) {
   .box {
@@ -1365,6 +1418,22 @@ header {
   }
 }
 @media only screen and (max-width: 850px) {
+  .app .legal-content h3 {
+    margin: 5rem 0 2.5rem 0;
+    font-size: 2.75rem;
+  }
+  .p-padding {
+    padding: 0 0 0 3rem;
+  }
+  .divider {
+    margin: 5rem 0;
+  }
+  .legal-content h4 {
+    font-size: 2.5rem;
+  }
+  .legal-section {
+    padding: 15rem 0 0 0;
+  }
   .metaverse-section.wwu-section {
     padding: 8.5rem 0;
   }

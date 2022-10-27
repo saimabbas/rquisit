@@ -9,6 +9,7 @@ import ProductPage1 from "./views/ProductPage1";
 import ProductPage2 from "./views/ProductPage2";
 import ProductPage3 from "./views/ProductPage3";
 import ProductPage4 from "./views/ProductPage4";
+import Legal from "./views/Legal";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/productpage2" element={<ProductPage2 />} />
           <Route exact path="/productpage3" element={<ProductPage3 />} />
           <Route exact path="/productpage4" element={<ProductPage4 />} />
+          <Route exact path="/legal" element={<Legal />} />
         </Routes>
       </Switch>
     </>

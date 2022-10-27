@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/img/logo.png";
 import BGC from "../assets/img/digitalfashion-bg.png";
 import OceanVideo from "../assets/video/ocean-video.mp4";
+import PVC from "../assets/img/pvc.mp4";
 import Jew1White from "../assets/img/jew-img-1-white.png";
 import Jew1Black from "../assets/img/jew-img-1-black.png";
 import Jaw1Black from "../assets/img/jaw-img-1-black.png";
@@ -248,7 +249,7 @@ function App() {
               </div>
               {/* <h1>future | fashion</h1> */}
             </div>
-            <header data-speed={1.75}>
+            <header>
               <div className="box">
                 <div className="header-content">
                   <div className="header-left header-icons">
@@ -334,7 +335,7 @@ function App() {
             </div>
           </section>
           <section className="seabones-section">
-            <video src={OceanVideo} autoPlay loop muted></video>
+            <video src={PVC} autoPlay loop muted></video>
             <div className="box">
               <div className="seabones-content">
                 <div className="sb-left">
@@ -413,17 +414,17 @@ function App() {
             <div className="box">
               <div className="footer-content">
                 <div className="footer-grid">
-                  <a href="#">About</a>
+                  <a href="/about">About</a>
                   <a href="#">Privacy</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/terms-of-service">
                     Terms of Service
                   </a>
                   <a href="#">Partnership</a>
-                  <a href="#">Contact us</a>
+                  <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
                 <div className="footer-grid">
                   <a href="#">FAQ</a>
-                  <a href="#">Education</a>
+                  <a href="/learnnfts">Education</a>
                   <a href="https://deploy-preview-20--tender-montalcini-a9ead8.netlify.app/refund-policy">
                     Refund Policy
                   </a>
