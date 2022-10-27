@@ -410,7 +410,7 @@ function App(props) {
                 <div className="footer-grid">
                   <a href="/about">About</a>
                   <a href="/legal">Privacy</a>
-                  <a href="/legal">Terms of ServicePolicy</a>
+                  <a href="/legal">Terms of Service</a>
                   <a href="#">Partnership</a>
                   <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>

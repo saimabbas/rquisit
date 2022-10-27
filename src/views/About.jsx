@@ -470,7 +470,7 @@ function App() {
                   <a href="/legal">Privacy</a>
                   <Linka to="/legal#privacy">Your link text</Linka>
 
-                  <a href="/legal">Terms of ServicePolicy</a>
+                  <a href="/legal">Terms of Service</a>
                   <a href="#">Partnership</a>
                   <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
