@@ -34,7 +34,7 @@ import {
   Circ,
 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-/* import { ScrollSmoother } from "gsap/ScrollSmoother"; */
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
@@ -48,18 +48,31 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import Accordion from "react-bootstrap/Accordion";
 import "bootstrap/dist/css/bootstrap.min.css";
+import $ from "jquery";
 
 function App() {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
+  $(document).ready(function () {
+    var isChrome =
+      /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (window.location.hash && isChrome) {
+      setTimeout(function () {
+        var hash = window.location.hash;
+        window.location.hash = "";
+        window.location.hash = hash;
+      }, 300);
+    }
+  });
   useEffect(() => {
     /* ScrollSmoother.create({
       smooth: 1.25,
       effects: true,
       smoothTouch: 0,
     }); */
+
     let landingAnim = gsap.timeline();
     landingAnim
       .fromTo(
@@ -419,17 +432,15 @@ function App() {
               <div className="footer-content">
                 <div className="footer-grid">
                   <a href="/about">About</a>
-                  <a href="https://webexhaust-rquisit.netlify.app/legal#privacy">
-                    Privacy
-                  </a>
-                  <a href="/legal">Terms of Service</a>
-                  <a href="#">Partnership</a>
+                  <a href="/legal#privacy">Privacy</a>
+                  <a href="/legal#terms-of-service">Terms of Service</a>
+                  <a href="/#work-with-us">Partnership</a>
                   <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
                 <div className="footer-grid">
-                  <a href="#">FAQ</a>
+                  <a href="/about#faq">FAQ</a>
                   <a href="/learnnfts">Education</a>
-                  <a href="/legal">Refund Policy</a>
+                  <a href="/legal#refund">Refund Policy</a>
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMkYl3RtKCUzOOrKo79OLNRs-iCvwwrUBII07GeRmU2Qv9OQ/viewform">
                     Jobs
                   </a>

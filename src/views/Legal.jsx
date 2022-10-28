@@ -30,43 +30,31 @@ import {
   Circ,
 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-/* import { ScrollSmoother } from "gsap/ScrollSmoother"; */
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-// import $ from "jquery";
+import $ from "jquery";
 
 function App() {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
-
+  $(document).ready(function () {
+    var isChrome =
+      /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (window.location.hash && isChrome) {
+      setTimeout(function () {
+        var hash = window.location.hash;
+        window.location.hash = "";
+        window.location.hash = hash;
+      }, 300);
+    }
+  });
   useEffect(() => {
     /* ScrollSmoother.create({
       smooth: 1.25,
       effects: true,
       smoothTouch: 0,
-    }); */
-    /* $(document).ready(function () {
-      // Add smooth scrolling to all links
-      $("a").on("click", function (event) {
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          var hash = this.hash;
-
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top,
-            },
-            800,
-            function () {
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            }
-          );
-        }
-      });
     }); */
   }, []);
 
@@ -77,7 +65,7 @@ function App() {
           <section className="legal-section">
             <div className="box">
               <div className="legal-content">
-                <h2>TERMS OF SERVICE</h2>
+                <h2 id="terms-of-service">TERMS OF SERVICE</h2>
                 <br />
                 <p>
                   This website and mobile app are operated by Rquisit.
@@ -606,7 +594,7 @@ function App() {
                   those changes.
                 </p>
                 <div className="divider"></div>
-                <h2>REFUND POLICY</h2>
+                <h2 id="refund">REFUND POLICY</h2>
                 <br />
                 <p>
                   At the moment, we have a non-refund policy.
@@ -1139,17 +1127,15 @@ function App() {
               <div className="footer-content">
                 <div className="footer-grid">
                   <a href="/about">About</a>
-                  <a href="https://webexhaust-rquisit.netlify.app/legal#privacy">
-                    Privacy
-                  </a>
-                  <a href="/legal">Terms of Service</a>
-                  <a href="#">Partnership</a>
+                  <a href="/legal#privacy">Privacy</a>
+                  <a href="/legal#terms-of-service">Terms of Service</a>
+                  <a href="/#work-with-us">Partnership</a>
                   <a href="mailto:team@rquisit.com">Contact us</a>
                 </div>
                 <div className="footer-grid">
-                  <a href="#">FAQ</a>
+                  <a href="/about#faq">FAQ</a>
                   <a href="/learnnfts">Education</a>
-                  <a href="/legal">Refund Policy</a>
+                  <a href="/legal#refund">Refund Policy</a>
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMkYl3RtKCUzOOrKo79OLNRs-iCvwwrUBII07GeRmU2Qv9OQ/viewform">
                     Jobs
                   </a>

@@ -18,8 +18,9 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   position: relative;
+  display: block;
 }
 a {
   text-decoration: none;
@@ -75,10 +76,6 @@ a {
 .loading-screen p {
   font-size: 2rem;
   color: var(--black);
-}
-html,
-body {
-  scroll-behavior: smooth;
 }
 /* HEADER */
 .hero-section {
@@ -1373,6 +1370,15 @@ header {
 .p-padding {
   padding: 0 0 0 5rem;
 }
+.cc-mob {
+  display: none;
+  width: 100%;
+  object-fit: contain;
+  margin: 5rem 0;
+}
+.cc-pc {
+  display: block;
+}
 /* RESPONSIVENESS */
 @media only screen and (max-width: 1100px) {
   .box {
@@ -1509,6 +1515,12 @@ header {
   .cura-sec-content {
     flex-direction: column;
   }
+  .cc-mob {
+    display: block;
+  }
+  .cc-pc {
+    display: none;
+  }
   .cura-right-grid {
     width: 100%;
     margin: 2rem 0 0 0;
@@ -1605,6 +1617,9 @@ header {
   .blog-grid {
     grid-template-columns: 1fr;
   }
+  .blog-grid {
+    grid-gap: 2.5rem;
+  }
   .products-grid {
     grid-gap: 1.5rem;
   }
@@ -1615,11 +1630,18 @@ header {
     text-align: center;
   }
   .editorial-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1.5rem;
   }
   .editorial-grid-card a {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+  .showtime-text {
+    align-items: center;
+    text-align: center;
+  }
+  .showtime-grid > img {
+    transform: translate(-7.5%, 0);
   }
   .about-hero-content div h2,
   .r-faq-content h2,
@@ -1641,8 +1663,9 @@ header {
   .showtime-text h2 {
     font-size: 5rem;
   }
-  .welcome-videos-grid iframe {
-    min-height: 22.5rem;
+  .welcome-videos-grid iframe,
+  .getstarted-videos-grid iframe {
+    min-height: 20rem;
   }
   .nl-content {
     max-width: 650px;
