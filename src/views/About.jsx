@@ -30,33 +30,44 @@ import {
   Circ,
 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+/* import { ScrollSmoother } from "gsap/ScrollSmoother"; */
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-// import $ from "jquery";
+import $ from "jquery";
 import { HashLink as Linka } from "react-router-hash-link";
-
 function App() {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  gsap.registerPlugin(ScrollTrigger);
+
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
-  /* $(document).ready(function () {
-    $("a[href*=\\#]").on("click", function (e) {
-      e.preventDefault();
-      $("html, body").animate(
-        {
-          scrollTop: $(this.hash).offset().top,
-        },
-        500
-      );
-    });
-  }); */
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    /* $("a").on("click", function (event) {
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        // event.preventDefault();
+
+        var hash = this.hash;
+
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          800,
+          function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          }
+        );
+      }
+    }); */
+  });
   useEffect(() => {
-    ScrollSmoother.create({
+    /* ScrollSmoother.create({
       smooth: 1.25,
       effects: true,
       smoothTouch: 0,
-    });
+    }); */
     let landingAnim = gsap.timeline();
     landingAnim
       .fromTo(
@@ -467,8 +478,9 @@ function App() {
               <div className="footer-content">
                 <div className="footer-grid">
                   <a href="/about">About</a>
-                  <a href="/legal">Privacy</a>
-                  <Linka to="/legal#privacy">Your link text</Linka>
+                  <a href="https://webexhaust-rquisit.netlify.app/#privacy">
+                    Privacy
+                  </a>
 
                   <a href="/legal">Terms of Service</a>
                   <a href="#">Partnership</a>

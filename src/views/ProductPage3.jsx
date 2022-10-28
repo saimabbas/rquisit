@@ -34,7 +34,7 @@ import {
   Circ,
 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+/* import { ScrollSmoother } from "gsap/ScrollSmoother"; */
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
@@ -50,15 +50,16 @@ import Accordion from "react-bootstrap/Accordion";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  gsap.registerPlugin(ScrollTrigger);
+
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   useEffect(() => {
-    ScrollSmoother.create({
+    /* ScrollSmoother.create({
       smooth: 1.25,
       effects: true,
       smoothTouch: 0,
-    });
+    }); */
     let landingAnim = gsap.timeline();
     landingAnim
       .fromTo(
@@ -418,7 +419,9 @@ function App() {
               <div className="footer-content">
                 <div className="footer-grid">
                   <a href="/about">About</a>
-                  <a href="/legal">Privacy</a>
+                  <a href="https://webexhaust-rquisit.netlify.app/#privacy">
+                    Privacy
+                  </a>
                   <a href="/legal">Terms of Service</a>
                   <a href="#">Partnership</a>
                   <a href="mailto:team@rquisit.com">Contact us</a>

@@ -30,11 +30,11 @@ import {
   Circ,
 } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+/* import { ScrollSmoother } from "gsap/ScrollSmoother"; */
 import { Link } from "react-router-dom";
 // import { SplitText } from "gsap/SplitText";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-import $ from "jquery";
+// import $ from "jquery";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -46,11 +46,33 @@ function App() {
       effects: true,
       smoothTouch: 0,
     }); */
+    /* $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          var hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    }); */
   }, []);
 
   return (
-    <div className="smoosth-wrapper" id="smooth-wrapper">
-      <div id="smooth-cosntent">
+    <div>
+      <div>
         <div className="app">
           <section className="legal-section">
             <div className="box">
@@ -595,6 +617,7 @@ function App() {
                 </p>
 
                 <div className="divider"></div>
+                {/* <a id="privacy" name="privacy"></a> */}
                 <h2 id="privacy" name="privacy">
                   {" "}
                   PRIVACY
@@ -1116,7 +1139,9 @@ function App() {
               <div className="footer-content">
                 <div className="footer-grid">
                   <a href="/about">About</a>
-                  <a href="/legal">Privacy</a>
+                  <a href="https://webexhaust-rquisit.netlify.app/#privacy">
+                    Privacy
+                  </a>
                   <a href="/legal">Terms of Service</a>
                   <a href="#">Partnership</a>
                   <a href="mailto:team@rquisit.com">Contact us</a>
