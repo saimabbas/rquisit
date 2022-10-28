@@ -44,8 +44,7 @@ function App() {
         window.location.hash = hash;
       }, 300);
     }
-    var isSafari =
-      /Safari/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    var isSafari = /Safari/.test(navigator.userAgent);
     if (window.location.hash && isSafari) {
       setTimeout(function () {
         var hash = window.location.hash;
