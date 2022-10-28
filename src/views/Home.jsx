@@ -44,6 +44,15 @@ function App() {
         window.location.hash = hash;
       }, 300);
     }
+    var isSafari =
+      /Safari/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (window.location.hash && isSafari) {
+      setTimeout(function () {
+        var hash = window.location.hash;
+        window.location.hash = "";
+        window.location.hash = hash;
+      }, 300);
+    }
   });
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   useEffect(() => {
