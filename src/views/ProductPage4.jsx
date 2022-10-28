@@ -442,7 +442,7 @@ function App() {
               <div className="footer-content">
                 <div className="footer-grid">
                   <a href="/about">About</a>
-                  <a href="https://webexhaust-rquisit.netlify.app/#privacy">
+                  <a href="https://webexhaust-rquisit.netlify.app/legal#privacy">
                     Privacy
                   </a>
                   <a href="/legal">Terms of Service</a>
